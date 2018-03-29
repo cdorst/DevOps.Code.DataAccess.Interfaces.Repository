@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace DevOps.Code.DataAccess.Interfaces.Repository
 {
     /// <summary>Represents a generic data-access repository</summary>
-    public interface IRepository
+    public interface IRepository<TDbContext, TEntity, TKey>
         where TDbContext : DbContext
         where TEntity : class, IEntity<TKey>
         where TKey : struct
